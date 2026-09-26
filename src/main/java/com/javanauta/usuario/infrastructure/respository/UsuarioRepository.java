@@ -18,6 +18,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     // essa anotaçao obrigatoria transactional ajuda a nao da erro na hora de deletar
     @Transactional
     void deleteByEmail(String email);
+
+    Usuario save(Usuario usuario);
 }
 
 
